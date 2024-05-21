@@ -1,18 +1,15 @@
 {
-    "rewrites": [{ "source": "/(.*)", "destination": "/api/$1" }],
-    "headers": [
+    "version": 2,
+    "builds": [
       {
-        "source": "/(.*)",
-        "headers": [
-          {
-            "key": "access-control-allow-origin",
-            "value": "*"
-          },
-          {
-            "key": "Cache-Control",
-            "value": "s-maxage=10"
-          }
-        ]
+        "src": "api/index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/api/index.js"
       }
     ]
   }
