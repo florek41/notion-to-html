@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('../index');
+var app = require('../api/index');
 var debug = require('debug')('notion-api-3---express:server');
 var http = require('http');
 
