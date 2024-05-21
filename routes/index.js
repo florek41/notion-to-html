@@ -1,6 +1,8 @@
+require('dotenv').config();
 const { getBlocks } = require("../lib/notion");
 const cloudinary = require("cloudinary").v2;
 const probe = require("probe-image-size");
+const token = process.env.NOTION_TOKEN;
 
 // Add width and height to block.image
 // Returns array with image width and height
@@ -200,7 +202,6 @@ exports.index = async (req, res) => {
    try {
       const pageId = req.params.pageId.replaceAll("-", "");
       const { body } = req;
-      const { token } = body;
       const params = req.query;
       const { remoteAddress } = req.socket;
 
