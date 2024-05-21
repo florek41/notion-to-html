@@ -6,6 +6,8 @@
       "start": "node ./bin/www"
    },
    "dependencies": {
+      "@babel/core": "^7.13.10",
+      "@babel/preset-env": "^7.13.12",
       "@babel/plugin-transform-flow-strip-types": "^7.24.1",
       "@notionhq/client": "^1.0.4",
       "@tryfabric/martian": "^1.2.4",
