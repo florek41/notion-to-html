@@ -6,11 +6,11 @@ var logger = require("morgan");
 var app = express();
 
 // view engine setup
-app.set("views", __dirname + "/views");
+app.set("views", __dirname + "../views");
 app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").createEngine());
 
-app.use(logger("dev"));
+app.use(logger("dev"));s
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
